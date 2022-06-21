@@ -1,0 +1,48 @@
+
+.heading{
+    margin-top: 50px;
+    margin-left:45%;
+}
+.heading2{
+    margin-top: 50px;
+    margin-left:46%;
+}
+
+
+.table1{
+    width: 100vh;
+    margin-left:26%;
+    
+}
+.table2{
+    width: 100vh;
+    margin-left:25%;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('../../assets/homeImages/wheat2.jpg');
+}
+
+
+th{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+td{
+ 
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        text-align: center;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+    
+}
+

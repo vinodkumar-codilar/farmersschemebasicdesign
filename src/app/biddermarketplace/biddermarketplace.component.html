@@ -1,0 +1,91 @@
+<style>
+    body {
+        background-image: url('../../assets/homeImages/wheat2.jpg');
+    }
+</style>
+<body>
+    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="col">
+    <div  class="form-row">
+        <div class="container "> 
+        <div>
+            <h3 class="heading">Current Bids</h3> </div>
+        
+        <table class="table1">
+            <thead class="thead-dark">
+            <tr>
+                <th>Crop Id</th>
+                <th>Crop Name</th>
+                <th>Farmer Name</th>
+                <th>Quantity</th>
+                <th>Base Price</th>
+                <th>Closing Date</th>
+              <!--  <th>Current Bid</th>--> 
+            </tr>
+            </thead>
+            <thead class="thead-dark">
+            <tr *ngFor="let c of crop">
+                
+                <td>{{c.id}}</td>
+                <td>{{c.name}}</td>
+                <td>{{c.fullname}}</td>
+                <td>{{c.quantity}}</td>
+                <td>{{c.basePrice}}</td>
+             <!--  <td>{{c.currbid}}</td> --> 
+                <td>{{c.endDate}}</td>
+                <td><Button type="submit" (click)= "setidBid(c.id,c.name,c.basePrice)" class="bidbtn">Make Bid</Button></td>
+            </tr>
+            </thead>
+        </table>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="container"> 
+                <div>
+                    <h3 class="heading2">Make Bid</h3> </div>
+                <table class="table2">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Crop ID</th>
+                        <th>Crop Name</th>
+                        <th>Current Bid</th>
+                        <th>Enter your Bid Price</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{name}}</td>
+                        <td>{{currbid}}</td>
+                        
+                        <div *ngIf="show">
+                        <!--<td><Button type="submit" onclick="makeBid()" class="btn">Make Bid</Button></td>-->
+                        <form (ngSubmit)="makeBid()">
+                            <input type = "number"  value =0 placeholder="Bid Amount" name="bidprice" [(ngModel)]="liveprice" >
+                            <input type="submit" value="place" id="submit">
+                            <h5>*Enter bid 100 greater than the current bid </h5>
+                        </form>
+                    </div>
+                    </tr>
+                </thead>
+                </table>
+                </div>
+               <a [routerLink]="['/Insurance']"><h2><b class="heading2" style="color: rgb(24, 240, 42); font-family: Segoe Print;">Insurance</b></h2></a>
+
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+</body>

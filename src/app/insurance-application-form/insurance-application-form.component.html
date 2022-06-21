@@ -1,0 +1,152 @@
+
+
+
+<div class="container-fluid"  >
+    <div class="container">
+        <div class="card" style=" text-align: center;">
+            <fieldset>
+            
+                <table class="table1">
+                    <div class="credentials">
+                        
+                        <tr>
+                            <td>
+                                <label>Season</label><span>*</span>
+                             </td>
+                            <td>
+                             <div class="username">
+                             <select placeholder="select croptype" formControlName="season"  class="input">
+                               <option value="Select option" disabled></option>
+                               <option value="kharif">Kharif</option>
+                               <option value="rabi">Rabi</option>
+                               <option value="horticultural">Horticultural</option>
+                           </select>
+                           </div>
+                           
+                             <div><span>Season is required</span></div>
+                       
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                <label>Crop Type</label><span>*</span>
+                             </td>
+                            <td>
+                             <div class="username">
+                             <select placeholder="select croptype" formControlName="croptype"  class="input">
+                               <option value="Select option" disabled></option>
+                               <option value="kharif">Kharif</option>
+                               <option value="rabi">Rabi</option>
+                               <option value="horticultural">Horticultural</option>
+                           </select>
+                           </div>
+                           
+                             <div><span>Crop type is required</span></div>
+                       
+                            </td>
+                          </tr>
+        
+        
+                          <tr>
+                            <td><label>Year</label><span>*</span></td>
+                            <td> 
+                             <div class="username"> 
+                             <input type="text" placeholder=" Enter Year" formControlName="year"  class="input">
+                           </div>
+                             
+                                 <div ><span>Year is required</span></div>
+                             </td>
+                          </tr>
+                          <tr>   
+                            
+                            <tr>
+                                <td> <label>Crop Name</label><span>*</span></td>
+                                <td>
+                                 <div class="username">
+                                 <select placeholder="select cropname" formControlName="cropname" class="input">
+                                   <option class="dropdown-header" style="font-size: large;" disabled>Kharif crops</option>
+                                     <option class="dropdown-item" value="paddy">Paddy</option>
+                                     <option class="dropdown-item" value="jowar">Jowar</option>
+                                     <option  class="dropdown-item" value="groundnut">Groundnut</option>
+                                     <option class="dropdown-item" value="maize">Maize</option>
+                                     <option class="dropdown-item" value="sesame">Seasame</option>
+                                     <option class="dropdown-header" style="font-size: large;" disabled >Rabi crops</option>
+                                     <option class="dropdown-item" value="wheat">Wheat</option>
+                                     <option class="dropdown-item" value="mustard">Mustard</option>
+                                     <option class="dropdown-item" value="gram(bengal gram)">Gram(Bengal gram)</option>
+                                     <option class="dropdown-item" value="masur(lentil)">Masur(Lentil)</option>
+                                     <option class="dropdown-item" value="barley">Barley</option>
+                                     <option class="dropdown-header" style="font-size: large;" disabled>Horticultural crops</option>
+                                     <option class="dropdown-item" value="sugarcane">Sugarcane</option>
+                                     <option class="dropdown-item" value="cotton">Cotton</option>
+                                 </select>
+                               </div>
+                                
+                                     <div><span>crop is required</span></div>
+                                 
+                                </td>
+                              </tr>
+        
+                              <tr>
+                                <td> <label>Area(In Hectare)</label><span>*</span></td>
+                                <td>
+                                 <div class="username">
+                                 <input type="text" placeholder="Enter area" formControlName="area"  class="input"/>
+                                 </div>
+                                 
+                                     <div><span>Area is required</span></div>
+                               
+                                </td>
+                             </tr>
+                              <tr>
+                                <td colspan="2">
+                                 <div>
+                                   
+                                   <!-- <button type="reset" (click)="onReset()" class="rebutton">RESET</button> -->
+                                   <button type="submit" class="subbutton">CALCULATE</button>
+                               </div>
+                                </td>
+                              </tr>
+                              
+                          
+                       
+                         <br>
+              <br>
+              <div>
+              <table class="table table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                      <th>Insurance Company</th>
+                      <th>Sum Insured(per Hectare)</th>
+                      <th>Share Premium</th>
+                      <th>Premium Amount</th>
+                      <th>Crop Name</th>
+                      <th>Area</th>
+                      <th>Sum Insured</th>
+                  </tr>
+                </thead>
+                  <tr >
+                      <!-- <td>{{insurancedetails.insuranceCompany}}</td>
+                      <td>{{insurancedetails.sumInsuredPerHectare}}</td>
+                      <td>{{insurancedetails.sharePremium}}</td>
+                      <td>{{insurancedetails.premiumAmount}}</td>
+                      <td>{{insurancedetails.cropName}}</td>
+                      <td>{{insurancedetails.area}}</td>
+                      <td>{{insurancedetails.sumInsured}}</td> -->
+                      
+                  </tr>
+                  
+              </table>
+              
+              
+              </div>
+           
+             
+
+
+
+ 
+</div>
+
+
+    <button><a [routerLink]="['/Insurance']"><b style="color: black; text-align: center;">Back</b></a></button>

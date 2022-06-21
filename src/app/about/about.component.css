@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: greenyellow;
+    border-radius: 2%;
+    background-color: lightyellow;
+}
+
+.contain {
+    position:relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    /* Setting text appearance */
+    font-family: "Montserrat", sans-serif;
+    font-size: 3vmin;
+    text-align: center;
+    color: black;
+    border-radius: 2%;
+    padding: 2rem;
+    margin: 2rem;
+    margin-top:5px;
+    position:absolute;
+
+}
+
+/* img{
+    background-size:cover;
+    opacity: 0.5;
+    overflow:hidden;
+} */
+h1{
+    /* font-family: 'WindSong', cursive; */
+    font-family: 'Caveat', cursive;
+    font-size: 60px;
+}
+p{
+    /* font-family: 'MonteCarlo', cursive; */
+    font-family: 'Satisfy', cursive;
+    font-size:20px;
+}

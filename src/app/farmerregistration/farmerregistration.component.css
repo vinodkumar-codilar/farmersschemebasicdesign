@@ -1,0 +1,149 @@
+.row{
+    background-image: url('../../assets/homeImages/wheat.jpg');
+	margin:20px;
+    margin-top:5px;
+    margin-bottom:50px;
+	margin-right:auto;
+	margin-left:auto;
+	height:auto;
+    width:1000px;
+    padding-bottom: 30px;
+}
+  
+  input{
+      border: 2px solid green;	
+  }
+  
+  button{
+      background-color:green;
+      color: white;
+      size:10px;
+      padding:10px;
+  }
+  
+  .container{
+      margin-left: 330px;
+  }
+  .container h1{
+      margin-left: 30px;
+  }
+  .f1{
+      margin-top: 5px;
+      margin-left: 97px;
+  }
+  .f2{
+      margin-top: 5px;
+      margin-left: 53px;
+  }
+  .f3{
+      margin-top: 5px;
+      margin-left: 110px;
+  }
+  .doc{
+      margin-left: 110px;
+  }
+  .a1{
+      margin-top: 5px;
+      margin-left: 70px;
+  
+  }
+  .a2{
+      margin-top: 5px;
+      margin-left: 130px;
+  }
+  .a3{
+      margin-top: 5px;
+      margin-left: 135px;
+  
+  }
+  .a4{
+      margin-top: 5px;
+      margin-left: 140px;
+  }
+  .l1{
+      margin-top: 5px;
+      margin-left: 126px;
+  
+  }
+  .l2{
+      margin-top: 5px;
+      margin-left: 105px;
+  
+  }
+  .l3{
+      margin-top: 5px;
+      margin-left: 137px;
+  
+  }
+  .b1{
+      margin-top: 5px;
+      margin-left: 45px;
+  }
+  .b2{
+      margin-top: 5px;
+      margin-left: 125px;
+  
+  }
+  .d1{
+      margin-top: 5px;
+      margin-left: 105px;
+  
+  
+  }
+  
+  .df1{
+      border: initial;
+      margin-left: 20px;
+  }
+  .df2{
+      border: initial;
+      margin-left: 20px;
+  }
+  .d2{
+      margin-top: 5px;
+      margin-left: 125px;
+      margin-bottom: 10px;
+  }
+  .pass1{
+      margin-top: 5px;
+      margin-left: 90px;
+  
+  }
+  .pass2{
+      margin-top: 5px;
+      margin-left: 27px;
+  
+  }
+  .roles{
+      margin-top:30px;
+      margin-left: 40px;
+  }
+  .roles input{
+      margin-left: 50px;
+      margin-bottom: 30px;
+  }
+  .button1{	
+      margin-left: 430px;
+  }
+  .button2{	
+      margin-left: 10px;
+  }
+  .show {display: block;}
+  
+  .error{
+      color: rgb(255, 0, 0);
+  }
+  .roles{
+    margin-top:30px;
+    margin-left: 50px;
+}
+.roles input{
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+  .rolebut{
+
+    margin-left:20px;
+
+  }
+  

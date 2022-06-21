@@ -1,0 +1,86 @@
+.start{
+	margin:20px;
+  margin-top:0px;
+  margin-bottom:0px;
+	margin-right:auto;
+	margin-left:auto;
+	background-color: white;
+	
+	width:auto;
+  padding-bottom: 30px;
+  background-image: url('../../assets/homeImages/wheat2.jpg');
+}
+.container1{
+  
+  text-align:center;
+  height: auto;
+  width: auto;
+  margin-top:30px;
+  margin-bottom: 250px;
+  margin-left:250;
+  padding: 50px;
+}
+.button1{
+  
+  margin-top: 10%;
+  text-align: center;
+}
+.input1{
+  margin-top:20px;
+  margin-left: 40px;
+}
+.input2{
+ margin-left: 40px;
+  margin-top: 7px;
+}
+.t1{
+ margin-left: 20px;
+ margin-top: 7px;
+}
+.t2{
+ margin-left: 25px;
+ margin-top: 7px;
+}
+.t3{
+ margin-left: 7px;
+ margin-top: 7px;
+}
+.t4{
+ margin-left: 25px;
+ margin-top: 7px;
+}
+.t5{
+ margin-left: 20px;
+ margin-top: 7px;
+}
+
+.t6{
+ margin-left: 20px;
+ margin-top: 7px;
+}
+
+.t7{
+ margin-left: 22px;
+ margin-top: 7px;
+}
+.t8{
+ margin-left: 10px;
+ margin-top: 7px;
+}
+
+.request {
+background-color:green;
+color:black;
+font-size: 20px;
+padding: 10px 15px;
+border: none;
+cursor: pointer;
+opacity: 0.9;
+}
+.request:hover {
+opacity: 1;
+}
+
+.error{
+  color: red;
+}

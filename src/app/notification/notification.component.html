@@ -1,0 +1,23 @@
+
+<div class=header><strong>Notifications</strong></div>
+<div *ngIf="role=='Bidder'">
+<div *ngFor="let n of notifications">
+    <div class="Container">
+    <img src="assets/chat.png" style="float: left; padding-right: 20px; height:30px">
+    <span class="msg"><strong>You bought {{n.quantity}} kilos of 
+        {{n.cropName}} whose base price was {{n.baseprice}} Rupees
+        from {{n.farmerName}} for {{n.amount}} Rupees </strong></span>   
+</div>
+</div>
+</div>
+
+<div *ngIf="role=='Farmer'">
+    <div *ngFor="let n of notifications">
+        <div class="Container">
+        <img src="assets/chat.png" style="float: left; padding-right: 20px; height:30px">
+        <span class="msg"><strong>You sold {{n.quantity}} kilos of 
+            {{n.cropName}} whose base price was {{n.baseprice}} Rupees
+           to  {{n.bidderName}} for {{n.amount}} Rupees </strong></span>   
+    </div>
+    </div>
+    </div>

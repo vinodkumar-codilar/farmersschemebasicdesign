@@ -1,0 +1,70 @@
+<body>
+<div class="col">
+    <div  class="form-row">
+        <div class="container "> 
+        <div>
+            <h3 class="heading">Active Crops </h3> </div>
+        
+        <table class="table1">
+            <thead class="thead-dark">
+            <tr>
+                <th>Crop Id</th>
+                <th>Crop Name</th>
+                <th>Farmer Name</th>
+                <th>Base Price</th>
+            </tr>
+            </thead>
+            <thead class="thead-dark">
+            <tr *ngFor="let c of crop">
+                <td>{{c.id}}</td>
+                <td>{{c.name}}</td>
+                <td>{{c.fullname}}</td>
+                <td>{{c.basePrice}}</td>
+                <td><Button type="submit" (click)= "setidBid(c.id,c.name)" class="bidbtn">Cick to View More</Button></td> <!-- this will come in if condition only if the status of crop is Active-->
+            </tr>
+            </thead>
+        </table>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="container"> 
+                <div>
+                    <h3 class="heading2">Bid Info</h3> </div>
+                <table class="table2">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Crop ID</th>
+                        <th>Crop Name</th>
+                        <th>Current Bid</th>
+                    </tr>
+                </thead>
+                <thead class="thead-dark">
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{name}}</td>
+                        <td>{{currbid}}</td>
+                    
+                      <!---<ng-container *ngIf="show">
+                        <td><input  type="number" value =0 placeholder="Bid Amount" name="bidprice" #liveprice ><br/></td>
+                        <td><Button type="submit" onclick="makeBid(id,currbid,liveprice.value)" class="btn">Make Bid</Button></td>
+                    </ng-container>-->  
+                    </tr>
+                </thead>
+                </table>
+            </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>

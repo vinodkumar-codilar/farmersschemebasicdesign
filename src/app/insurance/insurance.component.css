@@ -1,0 +1,59 @@
+.home img{
+    width: 200;
+    height: 200;
+    object-position: center;
+    object-fit: cover;
+}
+
+.homecontent
+{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50% , -50%);
+}
+.homecontent h1
+{
+    color:white;
+    font-size: 50x;
+}
+
+.homecontent a{
+    margin-top: 10px;
+    color:white;
+}
+.bg
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: auto;
+  background-position: center;
+  background: url('/assets/wheat.jpg') top center;
+}
+.about 
+{
+  color: white;
+  font-family: "Noto Sans Glagolitic";
+  border-radius: 20px;
+
+  align-items: center;
+  width: fit-content;
+  padding: 10px 13px;
+  font-size: 20px;
+  line-height: 20px;
+  
+  margin: 20px;
+}
+
+
+.placebutton{
+  padding: 0.5%;
+  font-size: large;
+  margin-left: 50%;   
+  margin-top: 9%; 
+  margin-right: 40%;
+  
+  }

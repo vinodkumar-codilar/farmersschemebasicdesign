@@ -1,0 +1,97 @@
+<div class="start">
+  <h1 align="center">Place Sell Request</h1>
+<form #form1="ngForm" (ngSubmit)="form1.form.valid && process()">
+        <div align="center" class="container1">
+            <div class="input1">
+              <br>
+              <br>
+             
+            <label  for="name"><b>Crop name :</b></label>
+            <input class="t1" name="name" placeholder=" crop name"  type="text" required  [(ngModel)]=crop.name #name="ngModel"><br/>
+            
+            <div *ngIf="form1.submitted && name.invalid">
+              <div class="error" *ngIf="name.errors.required">
+                Name is required.
+              </div>
+            </div>
+
+            <label  for="cropType"><b>Crop Type :</b></label>
+            <input class="t2" name="cropType" placeholder=" crop type" type="text" required [(ngModel)]=crop.cropType #cropType="ngModel"><br/>
+    
+            <div *ngIf="form1.submitted && cropType.invalid">
+              <div class="error" *ngIf="cropType.errors.required">
+                Crop type is required.
+              </div>
+              </div>
+
+
+            <label  for="fertilizerType"><b>Fertilizer Type :</b></label>
+            <input class="t3" name="fertilizerType" placeholder=" fertilizer type" type="text" required [(ngModel)]=crop.fertilizerType #fertilizerType="ngModel" ><br/>
+
+            <div *ngIf="form1.submitted && fertilizerType.invalid">
+              <div class="error" *ngIf="fertilizerType.errors.required">
+                fertilizer type is required.
+              </div>
+              </div>
+
+
+            <label  for="quantity"><b>Quantity  :</b></label>
+            <input class="t4" name="quantity" placeholder=" enter quantity" type="number"required [(ngModel)]=crop.quantity #quantity="ngModel" ><br/>
+            
+
+            <div *ngIf="form1.submitted && quantity.invalid">
+              <div class="error" *ngIf="quantity.errors.required">
+                Quantity is required.
+              </div>
+              </div>
+
+           
+            <label  for="basePrice"><b>base Price :</b></label>
+            <input class="t5" name="basePrice" placeholder=" crop name" type="number" required [(ngModel)]=crop.basePrice #basePrice="ngModel"><br/>
+
+            <div *ngIf="form1.submitted && basePrice.invalid">
+              <div class="error" *ngIf="basePrice.errors.required">
+                base price is required.
+              </div>
+              </div>
+
+            <label  for="startDate"> <b>start Date :</b></label>
+            <input class="t6" name="startDate"  type="date" required [(ngModel)]=crop.startDate #startDate="ngModel"><br/>
+
+            <div *ngIf="form1.submitted && startDate.invalid">
+              <div class="error" *ngIf="startDate.errors.required">
+                start Date is required.
+              </div>
+              </div>
+
+            <label  for="endDate"><b> end Date :</b></label>
+            <input class="t7" name="endDate" type="date" required [(ngModel)]=crop.endDate #endDate="ngModel"><br/>
+
+            <div *ngIf="form1.submitted && endDate.invalid">
+              <div class="error" *ngIf="endDate.errors.required">
+                end Date is required.
+              </div>
+              </div>
+            </div>
+		
+        <div class="input2">
+          <label  for="soilPH"><b>Soil PH :</b></label>
+          <input class="t8" name="soilPH" type="number" step="0.01" required [(ngModel)]=crop.soilPh #soilPh="ngModel">
+        
+
+        <div *ngIf="form1.submitted && soilPh.invalid">
+          <div class="error" *ngIf="soilPh.errors.required">
+              PH required.
+          </div>
+          </div>
+        
+        <div class="button1">
+          <button type="submit" class="request">Place Request</button>
+        </div>
+
+    
+      </div>
+    </div>
+
+    </form>
+  </div>

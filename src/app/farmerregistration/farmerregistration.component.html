@@ -1,0 +1,183 @@
+<div class="row">
+  <div class="main">
+      <div class="card">
+          <form #form1="ngForm" (ngSubmit)="form1.form.valid && process()">
+              <div class="container">
+                  <h2><b style="font-family: Mistral;"></b>Personal Details</h2>
+                  <label  for="uname"><b>Full Name  </b></label>
+                  <input class="f1" type="text" placeholder="Enter First Name " name="uname" required minlength="3" [(ngModel)]=user.fullname #uname="ngModel"><br/>
+                  
+                  <div *ngIf="form1.submitted && uname.invalid">
+                      <div class="error" *ngIf="uname.errors.required">
+                        Name is required.
+                      </div>
+                      <div class="error" *ngIf="uname.errors.minlength">
+                        Name must be at least 3 characters long.
+                      </div>
+                    </div>
+
+                  <label  for="contact"><b>Contact Number  </b></label>
+                  <input class="f2" type="text" placeholder="Enter Contact" name="contact" required pattern="[0-9]{10}" [(ngModel)]=user.phoneno #contact="ngModel"><br/>
+
+                  <div *ngIf="form1.submitted && contact.invalid">
+                      <div class="error" *ngIf="contact.errors.required">
+                        Contact Number is required.
+                      </div>
+                      <div class="error" *ngIf="contact.errors.pattern">
+                        Enter a valid Contact Number
+                      </div>
+                    </div>
+
+                  <label for="email"><b>Email id  </b></label>
+                  <input class="f3"  type="email" placeholder="Enter Email @abc.com" name="email" required [(ngModel)]=user.email #email="ngModel"><br/>
+
+                  <div *ngIf="form1.submitted && email.invalid">
+                      <div class="error" *ngIf="email.errors.required">
+                        Email is required.
+                      </div>
+                    </div>
+
+                  <div class="d1">Address Details</div>
+                  <input class="a1" type="text" placeholder="Line 1" name="addressLine1" required [(ngModel)]=address.addressLine1 #line1="ngModel"><br/>
+
+                 <div *ngIf="form1.submitted && line2.invalid">
+                    <div class="error" *ngIf="email.errors.required">
+                      Address is required.
+                    </div>
+                  </div>
+
+                  <input class="a1" type="text" placeholder="Line 2" name="addressLine2" required [(ngModel)]=address.addressLine2 #line2="ngModel"><br/>
+
+                  <label for="state"><b>State </b></label> <input class="a2" type="text" name="state" required [(ngModel)]=address.state #state="ngModel" ><br/>
+                 
+                  <div *ngIf="form1.submitted && state.invalid">
+                      <div class="error" *ngIf="state.errors.required">
+                        State is required.
+                      </div>
+                  </div>
+
+                  <label for="city"><b>City </b></label> <input class="a3"  type="text" name="city"[(ngModel)]=address.city #contact="ngModel" ><br/>
+                 
+                  <div *ngIf="form1.submitted && state.invalid">
+                      <div class="error" *ngIf="state.errors.required">
+                        City is required.
+                      </div>
+                  </div>
+
+                  <label for="pin"><b>Pin </b></label> <input class="a4"  type="text" name="pin" required pattern="[0-9]{6}"  [(ngModel)]=address.pincode #pin="ngModel" ><br/>
+                 
+                  <div *ngIf="form1.submitted && pin.invalid">
+                  <div class="error" *ngIf="pin.errors.required">
+                      Pin Code  is required.
+                    </div>
+                    <div class="error" *ngIf="pin.errors.pattern">
+                      Enter a valid Pin Code
+                    </div>
+                  </div>
+
+                  <div class="d1">Bank Details</div>
+                  <label for="account"><b>Account Number  </b></label> <input class="b1" type="text" name="account" required pattern="[0-9]{12}" [(ngModel)]=user.accountNumber #account="ngModel"><br/>
+                  <div *ngIf="form1.submitted && account.invalid">
+                      <div class="error" *ngIf="account.errors.required">
+                          Account Number  is required.
+                        </div>
+                        <div class="error" *ngIf="account.errors.pattern">
+                          Enter a Account Number.
+                        </div>
+                      </div>
+                  <label for="ifsc"><b>IFSC  </b></label> <input class="b2" type="text" name="ifsc" [(ngModel)]=user.ifscCode #ifsc="ngModel"><br/>
+                 
+                  <div *ngIf="form1.submitted && ifsc.invalid">
+                      <div class="error" *ngIf="ifsc.errors.required">
+                          IFSC Code is required.
+                        </div>
+                        <div class="error" *ngIf="ifsc.errors.minlength">
+                          Enter a valid IFSC Code
+                        </div>
+                      </div>
+                  <div class="doc">Document</div>
+                  <label for="aadhar"><b>Aadhar </b></label> <input class="d1" type="text" name="aadhar" required pattern="[0-9]{12}"  [(ngModel)]=user.Aadharcard #addhar="ngModel"><br/>
+                                                            <!--  <input class="df1" type="file" name="aadharfile" required=true [(ngModel)]=user.addharfile><br/> -->
+
+                  <div *ngIf="form1.submitted && addhar.invalid">
+                      <div class="error" *ngIf="addhar.errors.required">
+                          Addhar Card Number is required.
+                        </div>
+                        <div class="error" *ngIf="addhar.errors.pattern">
+                          Enter a valid Addhar Number
+                        </div>
+                      </div>
+
+                  <label for="pan"><b>PAN  </b></label> <input class="d2" type="text" name="pan"  required minlength="8" [(ngModel)]=user.pancard #pan="ngModel"> <br/>
+                                                    <!--   <input class="df2" type="file" name="panfile"  required=true [(ngModel)]=user.document.panfile ><br/> --> 
+                                                        
+                                                         
+                      <div *ngIf="form1.submitted && pan.invalid">
+                      <div class="error" *ngIf="pan.errors.required">
+                          Pan Card Number  is required.
+                        </div>
+                        <div class="error" *ngIf="pan.errors.minlength">
+                          Enter a valid Pan Card.
+                        </div>
+                      </div>
+
+                      <label for="password"><b>Password  </b></label> <input class="pass1" type="password" name="pass1"  required minlength="8" [(ngModel)]=user.password #pass="ngModel"><br/>
+                      <label for="confirm"><b>Confirm Password  </b></label> <input class="pass2" type="password" name="pass2"  required minlength="8" [(ngModel)]=confirmPassword #pass="ngModel"><br/>
+                     
+                      <div *ngIf="form1.submitted && pass.invalid">
+                          <div class="error" *ngIf="pass.errors.required">
+                              Enter Password.
+                            </div>
+                            
+                            <div class="error" *ngIf="pass.errors.minlength">
+                              Minimun length of Password is 8
+                            </div>
+                          </div>
+                    <form>
+                      <div class="roles">
+                      <label for="role">Choose a Role:</label>
+                      <button id ="farmer" class= rolebut (click)="assignRole('Bidder')" >Bidder</button>
+
+                      <button id="bidder" class= rolebut (click)="assignRole('Farmer')"  >Farmer</button>
+                      </div>
+                    </form>
+
+                      <div *ngIf="user.role=='Farmer'">
+                      <div  class="d1">Land Details</div>
+                  <label for="area"><b>Area </b></label> <input class="l1" type="text" name="area" required [(ngModel)]=land.area #area="ngModel"><br/>
+                 
+                  <div *ngIf="form1.submitted && area.invalid">
+                      <div class="error" *ngIf="area.errors.required">
+                          Area  is required.
+                        </div>
+                      </div>
+                  <label for="address"><b>Address </b></label> <input class="l2" type="text" name="address" required [(ngModel)]=land.address #addres="ngModel"><br/>
+                 
+                  <div *ngIf="form1.submitted && addres.invalid">
+                      <div class="error" *ngIf="addres.errors.required">
+                          Address  is required.
+                        </div>
+                      </div>
+
+                  <label for="pin"><b>Pin </b></label> <input class="l3" type="text" name="pin" required pattern="[0-9]{6}"   [(ngModel)]=land.pincode #pin2="ngModel"><br/>
+        
+                  <div *ngIf="form1.submitted && pin2.invalid">
+                  <div class="error" *ngIf="pin2.errors.required">
+                      Pin Code  is required.
+                    </div>
+                    <div class="error" *ngIf="pin2.errors.pattern">
+                      Enter a valid Pin Code
+                    </div>
+                  </div>
+              </div>
+              </div>
+                  <br>
+              <div>
+                
+                  <button *ngIf="user.role=='Farmer' || user.role=='Bidder'" class="button1" type="submit" id="submit">Register</button>
+                  <button  *ngIf="user.role=='Farmer' || user.role=='Bidder'"  class="button2" (click)=reset() type ="submit"  >Reset</button><br>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
